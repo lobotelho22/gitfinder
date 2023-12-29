@@ -153,4 +153,7 @@ body {
 hr {
   background-color: rgba(229, 229, 229, 0.2);
   border: 1px solid rgba(229, 229, 229, 0.2);
+  width: 60%;
+  text-align: center;
+  margin: 0 auto 0 auto;
 }
