@@ -1,13 +1,27 @@
 import "./styles.css";
 
-const ItemList = ({title, description}) => {
+const ItemList = ({ repoData }) => {
+
+  const generateArticles = () => {
+    return repoData.map(repo => {
+      return (
+        <>
+          <strong><a href={repo.clone_url} target="_blank" rel="noreferrer">{repo.name}</a></strong>
+          <p>{repo.description}</p>
+          <hr />
+        </>
+      )
+    })   
+  }
+
   return (
     <article>
-        <strong>Title</strong>
-        <p>description</p>
-        <hr />
+      {
+        generateArticles()
+      }
+
     </article>
   )
 }
 
-export default ItemList
+export default ItemList;
